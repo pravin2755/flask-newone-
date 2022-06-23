@@ -9,7 +9,6 @@ class Register(models.Model):
     Confirm_password = models.CharField(max_length=50)
 
 
-
 class Blog(models.Model):
     login = models.ForeignKey(Register,related_name='log', on_delete=models.CASCADE)
     title = models.CharField(max_length=50)
