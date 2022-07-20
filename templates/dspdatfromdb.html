@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+
+    <body>
+    <!-***** Blog Start ***** -->
+    <section class="section" id="our-classes">
+        <div class="container">
+            <br>
+            <br>
+            <div class="row">
+                  {% for blog in data %}
+                        <div class="col-md-3">
+                            <section class='tabs-content'>
+                                    <article>
+                                          <!-- here is declaration of dynamic image upload in  -->
+                                        <h4>{{ blog.username }}</h4>
+                                        <h4>{{ blog.firstname }}</h4>
+                                        <h4>{{ blog.lastname }}</h4>
+                                        <h4>{{ blog.email }}</h4>
+                                     </article>
+                                     <br>
+                            </section>
+                        </div>
+                  {% endfor %}
+  </body>
+</html>
