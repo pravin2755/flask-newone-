@@ -1,7 +1,6 @@
 from flask import Flask, request, render_template, flash, redirect, url_for
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
-from werkzeug.utils import redirect
 from flask_login import LoginManager, login_user,UserMixin,logout_user
 
 app = Flask(__name__)
@@ -71,15 +70,15 @@ def login():
 def logout():
 
     logout_user()
-    # return redirect("/login")
-    return "you are logged out successfully"
+    return redirect(url_for( "login"))                   #
+    # return "you are logged out successfully"
 
 
 @app.route("/disdata/", methods=["GET", "POST"])
 def disdata():
     data=User.query.all()
     print(data)
-    return render_template("dspdatfromdb.html",data=data)
+    return render_template("dspdatfromdb.html",data1=data)
 
 
 if __name__ == "__main__":
