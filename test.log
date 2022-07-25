@@ -1,0 +1,8 @@
+2022-07-06 18:46:15,683 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_app\views.py changed, reloading.
+2022-07-06 18:46:25,935 django.security.csrf WARNING Forbidden (CSRF token from POST incorrect.): /login/
+2022-07-06 18:46:51,173 root INFO Just an information
+2022-07-06 18:47:42,164 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_app\views.py changed, reloading.
+2022-07-06 18:47:45,920 root INFO login
+2022-07-06 18:47:50,440 root INFO login
+2022-07-06 18:48:16,730 root INFO login
+2022-07-06 18:53:23,299 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_app\views.py changed, reloading.
