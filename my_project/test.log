@@ -3,3 +3,23 @@
 2022-07-06 18:42:12,423 root WARNING Its a Warning
 2022-07-06 18:42:12,423 root ERROR Did you try to divide by zero
 2022-07-06 18:42:12,423 root CRITICAL Internet is down
+2022-07-06 18:42:47,623 root DEBUG Harmless debug Message
+2022-07-06 18:42:47,623 root INFO Just an information
+2022-07-06 18:42:47,623 root WARNING Its a Warning
+2022-07-06 18:42:47,623 root ERROR Did you try to divide by zero
+2022-07-06 18:42:47,623 root CRITICAL Internet is down
+2022-07-06 18:43:52,983 root DEBUG Harmless debug Message
+2022-07-06 18:43:53,479 root INFO Just an information
+2022-07-06 18:43:53,868 root WARNING Its a Warning
+2022-07-06 18:43:54,383 root ERROR Did you try to divide by zero
+2022-07-06 18:43:55,323 root CRITICAL Internet is down
+2022-07-06 18:48:40,869 root DEBUG Harmless debug Message
+2022-07-06 18:48:40,869 root INFO Just an information
+2022-07-06 18:48:40,869 root WARNING Its a Warning
+2022-07-06 18:48:40,869 root ERROR Did you try to divide by zero
+2022-07-06 18:48:40,869 root CRITICAL Internet is down
+2022-07-06 19:10:06,271 root DEBUG Harmless debug Message
+2022-07-06 19:10:06,271 root INFO Just an information
+2022-07-06 19:10:06,271 root WARNING Its a Warning
+2022-07-06 19:10:06,271 root ERROR Did you try to divide by zero
+2022-07-06 19:10:06,271 root CRITICAL Internet is down

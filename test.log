@@ -6,3 +6,163 @@
 2022-07-06 18:47:50,440 root INFO login
 2022-07-06 18:48:16,730 root INFO login
 2022-07-06 18:53:23,299 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_app\views.py changed, reloading.
+2022-07-06 19:07:50,811 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_app\views.py changed, reloading.
+2022-07-06 19:09:01,548 root INFO login 
+2022-07-06 19:09:55,222 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_app\views.py changed, reloading.
+2022-07-06 19:10:33,436 root INFO login 
+2022-07-06 19:11:31,180 root INFO login 
+2022-07-06 19:11:54,362 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_app\views.py changed, reloading.
+2022-07-06 19:12:44,880 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_app\views.py changed, reloading.
+2022-07-06 19:14:48,720 root INFO User ashok is logged in.
+2022-07-06 19:15:44,859 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_app\views.py changed, reloading.
+2022-07-06 19:15:47,336 root INFO User  is logged out.
+2022-07-06 19:16:25,157 root INFO User ashok is logged in.
+2022-07-06 19:17:21,828 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_app\views.py changed, reloading.
+2022-07-06 19:17:32,432 root INFO User ashok is logged out.
+2022-07-06 19:20:42,939 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_app\views.py changed, reloading.
+2022-07-06 19:21:46,194 root INFO User  is logged in.
+2022-07-06 19:30:56,399 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_app\views.py changed, reloading.
+2022-07-07 11:30:18,052 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_app\views.py changed, reloading.
+2022-07-07 11:32:49,338 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_app\views.py changed, reloading.
+2022-07-07 11:33:30,875 root INFO User ashok is logged in.
+2022-07-07 11:33:30,938 root INFO User ashok is logged in.
+2022-07-07 11:33:35,817 root INFO User ashok is logged out.
+2022-07-07 11:33:39,046 root INFO User ashok@gmail.com is blog in.
+2022-07-07 11:33:39,060 django.request WARNING Not Found: /forget/urls/change/9653af38a9774c50a0b630bf3fe5f254/
+2022-07-07 11:34:17,655 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_app\views.py changed, reloading.
+2022-07-07 11:34:21,462 root INFO User ashok@gmail.com is blog in.
+2022-07-07 11:34:21,496 django.request WARNING Not Found: //change/31c9f353011b4a6c847f2b2284e24b3c/
+2022-07-07 11:34:37,695 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_app\views.py changed, reloading.
+2022-07-07 11:34:41,445 root INFO User ashok@gmail.com is blog in.
+2022-07-07 11:38:27,808 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_app\views.py changed, reloading.
+2022-07-07 11:40:56,566 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_project\settings.py changed, reloading.
+2022-07-07 11:41:02,481 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_project\settings.py changed, reloading.
+2022-07-07 11:41:07,378 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_project\settings.py changed, reloading.
+2022-07-07 11:51:26,848 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_app\views.py changed, reloading.
+2022-07-07 11:57:29,057 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_app\views.py changed, reloading.
+2022-07-07 12:02:16,519 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_app\views.py changed, reloading.
+2022-07-07 12:02:36,753 django.request WARNING Method Not Allowed (GET): /posthecck/
+2022-07-07 12:02:36,754 django.request WARNING Method Not Allowed: /posthecck/
+2022-07-07 12:02:40,150 django.request WARNING Method Not Allowed (GET): /posthecck/
+2022-07-07 12:02:40,150 django.request WARNING Method Not Allowed: /posthecck/
+2022-07-07 12:09:40,073 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_app\views.py changed, reloading.
+2022-07-07 12:10:00,274 root INFO User ashok is logged in.
+2022-07-07 12:10:01,762 root INFO User ashok get their blog successfully.
+2022-07-07 12:18:30,918 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_app\urls.py changed, reloading.
+2022-07-07 12:18:33,435 root INFO User ashok is logged out.
+2022-07-07 12:18:41,232 root INFO User  is entered in about page.
+2022-07-07 12:18:45,286 root INFO User  is entered in about page.
+2022-07-07 12:19:00,398 root INFO User ashok is logged in.
+2022-07-07 12:19:02,504 root INFO User ashok get their blog successfully.
+2022-07-07 12:19:04,362 root INFO User ashok is entered in about page.
+2022-07-07 12:19:11,124 root INFO User ashok get their blog successfully.
+2022-07-07 12:19:24,097 root INFO User ashok  has been created blog successfully .
+2022-07-07 12:19:30,465 root INFO User ashok get their blog successfully.
+2022-07-07 12:19:35,290 root INFO User ashok is entered in about page.
+2022-07-07 12:20:19,035 root INFO User ashok get their blog successfully.
+2022-07-07 12:20:20,095 root INFO User ashok is entered in about page.
+2022-07-07 12:20:23,466 root INFO User ashok get their blog successfully.
+2022-07-07 12:22:52,127 root INFO User ashok get their blog successfully.
+2022-07-07 12:22:53,388 root INFO User ashok is entered in about page.
+2022-07-07 12:22:54,388 root INFO User ashok is entered in about page.
+2022-07-07 12:22:54,748 root INFO User ashok get their blog successfully.
+2022-07-07 12:22:55,842 root INFO User ashok get their blog successfully.
+2022-07-07 12:22:56,316 root INFO User ashok is entered in about page.
+2022-07-07 13:08:00,832 root INFO User ashok get their blog successfully.
+2022-07-07 13:13:47,438 root INFO User ashok  has been created blog successfully .
+2022-07-07 13:14:02,439 root INFO User ashok is entered in about page.
+2022-07-07 13:32:41,223 root INFO User ashok get their blog successfully.
+2022-07-07 13:32:47,523 root INFO User ashok get their blog successfully.
+2022-07-07 13:32:48,654 root INFO User ashok is entered in about page.
+2022-07-07 13:32:49,820 root INFO User ashok get their blog successfully.
+2022-07-07 13:32:50,897 root INFO User ashok get their blog successfully.
+2022-07-07 13:32:52,113 root INFO User ashok get their blog successfully.
+2022-07-07 13:33:06,576 root INFO User ashok is entered in about page.
+2022-07-07 13:33:16,346 root INFO User ashok get their blog successfully.
+2022-07-07 13:40:21,957 root INFO User ashok get their blog successfully.
+2022-07-07 13:40:37,842 root INFO User ashok get their blog successfully.
+2022-07-07 13:40:54,137 root INFO User ashok is logged out.
+2022-07-07 13:44:27,668 root INFO User  is entered in about page.
+2022-07-07 13:45:01,662 root INFO User  is entered in about page.
+2022-07-07 17:23:05,904 root INFO User  is entered in about page.
+2022-07-07 19:14:31,692 root ERROR User ashok credential id not corrected.
+2022-07-07 19:14:45,972 root INFO User ashok is logged in.
+2022-07-08 16:31:13,524 django.request WARNING Not Found: /favicon.ico
+2022-07-08 16:31:30,416 root INFO User  is entered in about page.
+2022-07-08 16:34:59,906 root ERROR User demo123 credential id not corrected.
+2022-07-08 16:35:02,784 root ERROR User demo123 credential id not corrected.
+2022-07-11 13:52:11,372 django.request WARNING Not Found: /favicon.ico
+2022-07-11 13:52:12,812 root INFO User ashok get their blog successfully.
+2022-07-11 14:00:13,581 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_app\views.py changed, reloading.
+2022-07-12 15:48:35,779 django.request ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\pravinsinh.gohil\Desktop\pravin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\pravinsinh.gohil\Desktop\pravin\venv\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\pravinsinh.gohil\Desktop\pravin\venv\lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view my_app.views.home didn't return an HttpResponse object. It returned None instead.
+2022-07-12 15:48:35,896 django.request WARNING Not Found: /favicon.ico
+2022-07-19 10:11:19,169 django.request ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\pravinsinh.gohil\Desktop\pravin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\pravinsinh.gohil\Desktop\pravin\venv\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\pravinsinh.gohil\Desktop\pravin\venv\lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view my_app.views.home didn't return an HttpResponse object. It returned None instead.
+2022-07-19 10:11:19,306 django.request WARNING Not Found: /favicon.ico
+2022-07-19 10:12:00,252 django.request WARNING Not Found: /home/
+2022-07-19 10:17:01,274 django.request ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\pravinsinh.gohil\Desktop\pravin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\pravinsinh.gohil\Desktop\pravin\venv\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\pravinsinh.gohil\Desktop\pravin\venv\lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view my_app.views.home didn't return an HttpResponse object. It returned None instead.
+2022-07-19 10:24:40,992 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_project\settings.py changed, reloading.
+2022-07-19 10:27:52,551 django.request WARNING Not Found: /home/
+2022-07-19 10:28:17,599 django.request ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\pravinsinh.gohil\Desktop\pravin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\pravinsinh.gohil\Desktop\pravin\venv\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\pravinsinh.gohil\Desktop\pravin\venv\lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view my_app.views.home didn't return an HttpResponse object. It returned None instead.
+2022-07-19 10:29:44,136 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_project\settings.py changed, reloading.
+2022-07-19 10:33:32,144 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_project\settings.py changed, reloading.
+2022-07-19 10:34:15,850 django.request ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\pravinsinh.gohil\Desktop\pravin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\pravinsinh.gohil\Desktop\pravin\venv\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\pravinsinh.gohil\Desktop\pravin\venv\lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view my_app.views.home didn't return an HttpResponse object. It returned None instead.
+2022-07-19 10:40:43,071 django.request ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\pravinsinh.gohil\Desktop\pravin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\pravinsinh.gohil\Desktop\pravin\venv\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\pravinsinh.gohil\Desktop\pravin\venv\lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view my_app.views.home didn't return an HttpResponse object. It returned None instead.
+2022-07-19 10:40:43,236 django.request WARNING Not Found: /favicon.ico
+2022-07-19 10:42:47,460 django.request ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\pravinsinh.gohil\Desktop\pravin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\pravinsinh.gohil\Desktop\pravin\venv\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\pravinsinh.gohil\Desktop\pravin\venv\lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view my_app.views.home didn't return an HttpResponse object. It returned None instead.
+2022-07-19 10:44:50,619 root ERROR User ajit credential id not corrected.

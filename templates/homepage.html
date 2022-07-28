@@ -1,34 +1,11 @@
+{% extends "base.html" %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-
-    <title>PHPJabbers.com | Free Blog Website Template</title>
-
-<!--    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">-->
-
-<!--    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">-->
-
-<!--    <link rel="stylesheet" href="assets/css/style.css">-->
-
-      <link rel="stylesheet" type="text/css" href="{% static  'css/bootstrap.min1.css' %}">
-
-        <link rel="stylesheet" type="text/css" href="{% static  'css/font-awesome1.css' %}">
-
-       <link rel="stylesheet" href="{% static  'css/style1.css' %}">
-
-
-
-    </head>
     <body>
-    
+    {% block content %}
+
     <!-- ***** Preloader Start ***** -->
     <div id="js-preloader" class="js-preloader">
       <div class="preloader-inner">
@@ -50,7 +27,7 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-<!--                        <a href="blogindex.html" class="logo">Blog<em> Website</em></a>-->
+<!--                        <a href="homepage.html" class="logo">Blog<em> Website</em></a>-->
                         <a href="#" class="logo">Blog<em> Website</em></a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -75,11 +52,11 @@
 
 
 
-<!--                            <li><a href="blogindex.html" class="active">Home</a></li>-->
+<!--                            <li><a href="homepage.html" class="active">Home</a></li>-->
 <!--                            <li><a href="blog.html">Blog</a></li>-->
 <!--                            <li><a href="about.html">About us</a></li>-->
 <!--                            <li><a href="team.html">Authors</a></li>-->
-<!--                            <li><a href="contact.html">Contact</a></li>-->
+<!--                            <li><a href="addblog.html">Contact</a></li>-->
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -105,7 +82,7 @@
                 <h6>Lorem ipsum dolor sit amet</h6>
                 <h2><em>Blog</em> mollia amenda</h2>
                 <div class="main-button">
-<!--                    <a href="contact.html">Contact Us</a>-->
+<!--                    <a href="addblog.html">Contact Us</a>-->
                      <a href="#">Contact Us</a>
                 </div>
             </div>
@@ -133,9 +110,9 @@
                     <section class='tabs-content'>
 
                               <article id='tabs-1'>
-                                  <img src ="{% static '' %}{{ blog.images_upload }}" alt="">
+                                  <img src ="{% static '' %}media/{{ blog.images_upload }}" alt="">
                                   <h4>{{ blog.blog_dis }}</h4>
-                                  <p><i class="fa fa-user"></i> {{ user.username }} &nbsp;|&nbsp; <i class="fa fa-calendar"></i> {{ blog.date_detail }}</p>
+                                  <p><i class="fa fa-user"></i> {{ blog.user_id.username }} &nbsp;|&nbsp; <i class="fa fa-calendar"></i> {{ blog.date_detail }}</p>
                               </article>
                     </section>
                   </div>
@@ -209,10 +186,13 @@
     <script src="{% static 'js/imgfix.min1.js' %}"></script>
     <script src="{% static 'js/mixitup1.js' %}"></script>
     <script src="{% static 'js/accordions1.js' %}"></script>
-    
+
+
+
     <!-- Global Init -->
 <!--    <script src="assets/js/custom.js"></script>-->
     <script src="{% static 'js/custom1.js' %}"></script>
 
+    {% endblock %}
   </body>
 </html>

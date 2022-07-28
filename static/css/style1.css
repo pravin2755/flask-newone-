@@ -772,6 +772,7 @@ schedule
 
 .section-bg {
   background-position: center center;
+  background-image: url(about-fullscreen-1-1920x700.jpg)
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -1269,4 +1270,18 @@ a {
 a:focus,
 a:hover {
   color: #f9735b;
+}
+#call-to-action{
+
+background-image: url(banner-image-1-1920x500.jpg);
+}
+
+
+#schedule{
+ background-image: url(about-fullscreen-1-1920x700.jpg);
+}
+#call-to-action{
+
+background-image: url(banner-image-1-1920x500.jpg);
+
 }

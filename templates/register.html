@@ -55,8 +55,8 @@
                             <input type="email" class="form-input" name="email" id="Email" placeholder="Your Email"/>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="password1" id="password1" placeholder="Password1"/>
-                            <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                            <input type="password" class="form-input" name="password1" id="password1" placeholder="Password1"/>
+                            <span toggle="#password1" id="password" class="zmdi zmdi-eye field-icon toggle-password"></span>
                         </div>
                         <div class="form-group">
                             <input type="password" class="form-input" name="password2" id="Password2" placeholder="Repeat your password"/>
@@ -77,6 +77,19 @@
         </section>
 
     </div>
+<!--    <script>-->
+<!--        const togglePassword = document.querySelector("#Password");-->
+<!--const password = document.querySelector("#password1");-->
+
+<!--togglePassword.addEventListener("click", function () {-->
+<!--// toggle the type attribute-->
+<!--const type = password.getAttribute("type") === "password" ? "text" : "password";-->
+<!--password.setAttribute("type", type);-->
+
+<!--// toggle the icon-->
+<!--this.classList.toggle("zmdi-eye");-->
+<!--});-->
+<!--    </script>-->
 
     <!-- JS -->
     <script src="{% static 'js/jquery.min.js' %}"></script>

@@ -1,25 +1,9 @@
+{% extends "base.html" %}
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-
-    <title>PHPJabbers.com | Free Blog Website Template</title>
-
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
-
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    </head>
     
     <body>
+    {% block content %}
     
     <!-- ***** Preloader Start ***** -->
     <div id="js-preloader" class="js-preloader">
@@ -46,9 +30,13 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="blog.html" class="active">Blog</a></li>
-                            <li><a href="about.html">About us</a></li>
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="{% url 'blog_details' %}" class="active">Blog</a></li>
+                            <li><a href="{% url 'about' %}">About us</a></li>
+
+<!--                            <li><a href="index.html">Home</a></li>-->
+<!--                            <li><a href="blog.html" class="active">Blog</a></li>-->
+<!--                            <li><a href="about.html">About us</a></li>-->
                             <li><a href="team.html">Authors</a></li>
                             <li><a href="contact.html">Contact</a></li> 
                         </ul>          
@@ -160,6 +148,7 @@
                 
                         <div class="contact-form">
                             <form action="" method="post">
+                                {% csrf_token %}
                               <div class="row">
                                 <div class="col-lg-12">
                                   <fieldset>
@@ -222,6 +211,6 @@
     
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>
-
+    {% block content %}
   </body>
 </html>
