@@ -101,7 +101,7 @@ def home(request):
     user_name = request.user.username
     if request.user.is_authenticated:
         user_check = True
-        # all_blog = Blog.objects.all().values()
+        all_blog = Blog.objects.all().values()
         for i in all_blog:
             u_id = i['user_id']
             u_insta = User.objects.get(id=u_id)
