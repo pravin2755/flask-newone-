@@ -190,3 +190,7 @@ ValueError: The view my_app.views.home didn't return an HttpResponse object. It 
 2022-07-28 17:42:17,772 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_project\settings.py changed, reloading.
 2022-07-28 17:43:11,065 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_project\settings.py changed, reloading.
 2022-07-28 18:17:42,967 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_project\settings.py changed, reloading.
+2022-07-28 18:31:08,056 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_project\settings.py changed, reloading.
+2022-07-28 18:31:21,550 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_project\settings.py changed, reloading.
+2022-07-28 18:31:55,954 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_project\settings.py changed, reloading.
+2022-07-28 18:32:07,283 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_project\settings.py changed, reloading.
