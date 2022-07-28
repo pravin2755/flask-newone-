@@ -23,6 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!c$dh56#72^ke&ihx57$s(d^%xp81y=zbr*^*e-u=iwd#)6-a^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# DEBUG = False
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
@@ -76,7 +77,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         # 'NAME': BASE_DIR / 'db.sqlite3',
-        'HOST': 'localhost',
         'NAME': 'balg_data',
         'PASSWORD': 'postgres',
         'PORT': 5432,

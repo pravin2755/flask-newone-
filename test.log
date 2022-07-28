@@ -179,3 +179,13 @@ ValueError: The view my_app.views.home didn't return an HttpResponse object. It 
 2022-07-28 15:10:46,310 django.request WARNING Not Found: /static/media/upload/HDImage.jpg
 2022-07-28 15:10:46,313 django.request WARNING Not Found: /static/media/upload/Stamp2.PNG
 2022-07-28 15:11:05,786 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_project\settings.py changed, reloading.
+2022-07-28 17:26:25,790 django.request WARNING Not Found: /favicon.ico
+2022-07-28 17:28:37,584 root ERROR User ashok credential id not corrected.
+2022-07-28 17:28:45,567 root ERROR User ajit credential id not corrected.
+2022-07-28 17:30:57,036 root ERROR User pravin credential id not corrected.
+2022-07-28 17:38:39,913 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_project\settings.py changed, reloading.
+2022-07-28 17:38:54,393 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_project\settings.py changed, reloading.
+2022-07-28 17:39:22,598 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_project\settings.py changed, reloading.
+2022-07-28 17:41:45,287 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_project\settings.py changed, reloading.
+2022-07-28 17:42:17,772 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_project\settings.py changed, reloading.
+2022-07-28 17:43:11,065 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_project\settings.py changed, reloading.
