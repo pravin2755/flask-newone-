@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!c$dh56#72^ke&ihx57$s(d^%xp81y=zbr*^*e-u=iwd#)6-a^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['https://django-test-blog-demo.herokuapp.com/']
+ALLOWED_HOSTS = ['https://django-test-blog-demo.herokuapp.com/', "*"]
 
 # Application definition
 
@@ -76,11 +76,11 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         # 'NAME': BASE_DIR / 'db.sqlite3',
-        'HOST':'localhost',
+        'HOST': 'localhost',
         'NAME': 'balg_data',
-        'PASSWORD':'postgres',
+        'PASSWORD': 'postgres',
         'PORT': 5432,
-        'USER':'postgres'
+        'USER': 'postgres'
     }
 }
 #
@@ -126,6 +126,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "static", r'C:\Users\pravinsinh.gohil\Desktop\pravin\static']
+STATIC_ROOT  = os.path.join(BASE_DIR, 'staticfiles')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -134,7 +136,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media/')
 MEDIA_URL = "/media/"
-
 
 """ config url used for dynamic url """
 

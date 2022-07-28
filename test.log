@@ -166,3 +166,16 @@ Traceback (most recent call last):
     raise ValueError(
 ValueError: The view my_app.views.home didn't return an HttpResponse object. It returned None instead.
 2022-07-19 10:44:50,619 root ERROR User ajit credential id not corrected.
+2022-07-28 15:10:12,671 django.request WARNING Not Found: /static/css/style1.css
+2022-07-28 15:10:12,739 django.request WARNING Not Found: /static/js/popper1.js
+2022-07-28 15:10:12,914 django.request WARNING Not Found: /static/media/upload/HDImage.jpg
+2022-07-28 15:10:12,914 django.request WARNING Not Found: /static/media/upload/Stamp1_RgBnfOU.PNG
+2022-07-28 15:10:12,940 django.request WARNING Not Found: /static/media/upload/Stamp2.PNG
+2022-07-28 15:10:13,061 django.request WARNING Not Found: /favicon.ico
+2022-07-28 15:10:31,793 django.request WARNING Not Found: /gfdg
+2022-07-28 15:10:46,301 django.request WARNING Not Found: /static/css/style1.css
+2022-07-28 15:10:46,308 django.request WARNING Not Found: /static/js/popper1.js
+2022-07-28 15:10:46,310 django.request WARNING Not Found: /static/media/upload/Stamp1_RgBnfOU.PNG
+2022-07-28 15:10:46,310 django.request WARNING Not Found: /static/media/upload/HDImage.jpg
+2022-07-28 15:10:46,313 django.request WARNING Not Found: /static/media/upload/Stamp2.PNG
+2022-07-28 15:11:05,786 django.utils.autoreload INFO C:\Users\pravinsinh.gohil\Desktop\pravin\my_project\settings.py changed, reloading.
