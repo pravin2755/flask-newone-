@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 
 ]
 
@@ -73,8 +73,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'my_project.wsgi.application'
 
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -91,7 +89,6 @@ DATABASES = {
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -124,9 +121,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # STATICFILES_DIRS = [BASE_DIR / "static", r'C:\Users\pravinsinh.gohil\Desktop\pravin\static']
-STATIC_ROOT  = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
