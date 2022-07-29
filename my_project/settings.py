@@ -74,28 +74,36 @@ WSGI_APPLICATION = 'my_project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+import environ
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         # 'NAME': BASE_DIR / 'db.sqlite3',
-#         'NAME': 'balg_data',
-#         'PASSWORD': 'postgres',
-#         'PORT': 5432,
-#         'USER': 'postgres'
-#     }
-# }
+env = environ.Env()
+# reading .env file
+environ.Env.read_env()
+
+
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'ec2-44-195-100-240.compute-1.amazonaws.com',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
-        'NAME': 'd64v82mkhqkhrf',
-        'PASSWORD': 'postgres',
-        'PORT': 5432,
-        'USER': 'e07a1057e7fef7e31975be1e95c25b953cccc55eb586d1490fb16801135474fe'
-
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': env('POSTGRES_DB_NAME'),
+        'USER': env('POSTGRES_USER'),
+        'PASSWORD': env('POSTGRES_PASSWORD'),
+        'HOST': env('POSTGRES_HOST'),
+        'PORT': env('POSTGRES_PORT'),
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'ec2-44-195-100-240.compute-1.amazonaws.com',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+        # 'NAME': 'd64v82mkhqkhrf',
+        # 'PASSWORD': 'postgres',
+        # 'PORT': 5432,
+        # 'USER': 'e07a1057e7fef7e31975be1e95c25b953cccc55eb586d1490fb16801135474fe'
+    #
+    # }
+# }
 #
 # ENGINE': 'django.db.backends.mysql',
 #         'NAME': 'my_database',
@@ -140,7 +148,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # STATICFILES_DIRS = [BASE_DIR / "static", r'C:\Users\pravinsinh.gohil\Desktop\pravin\static']
 STATIC_ROOT  = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Default primary key field type
