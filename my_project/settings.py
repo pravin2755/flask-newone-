@@ -21,7 +21,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-!c$dh56#72^ke&ihx57$s(d^%xp81y=zbr*^*e-u=iwd#)6-a^'
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "my_project.settings")
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = False
 DEBUG = True
@@ -37,7 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'my_app'
+    'my_app',
+    'whitenoise.runserver_nostatic'
 ]
 
 MIDDLEWARE = [
@@ -48,6 +48,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+'whitenoise.middleware.WhiteNoiseMiddleware',
+
 ]
 
 ROOT_URLCONF = 'my_project.urls'
@@ -138,6 +140,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # STATICFILES_DIRS = [BASE_DIR / "static", r'C:\Users\pravinsinh.gohil\Desktop\pravin\static']
 STATIC_ROOT  = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Default primary key field type
