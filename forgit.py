@@ -1,8 +1,7 @@
-
-
+from flask_mail import Mail, Message
 import pandas as pd
 import pymongo
-from flask import Flask, request, render_template, flash, redirect, url_for, send_file, make_response, jsonify
+from flask import Flask, request, render_template, flash, redirect, url_for, send_file, make_response, jsonify, session
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, login_user, UserMixin, logout_user
@@ -15,8 +14,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'pravingohil'
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-login_manager = LoginManage
-r()
+login_manager = LoginManager()
 login_manager.init_app(app)
 
 
@@ -50,7 +48,7 @@ def create():  # used to create user and  store data to the mongoDB!!!
 # @app.route("/")                                                   #both url are valid.
 def update():
     # username = username
-    username = request.args.get('username')
+    username = request.args.get('username')  # demo url ......"http://127.0.0.1:5005/update?username=vijay"
     db_connect = pymongo.MongoClient("mongodb://localhost:27017")
     db = db_connect["test_db"]  # database get
     collection = db["col1"]  # collections(table )get
@@ -78,12 +76,16 @@ def read():  # function used to read user data from the mongoDB !!!!
     db = db_connect["test_db"]
     collection = db["col1"]
     x = collection.find_one({"username": username})
-    x["_id"] = str(x["_id"])
-    return x
+    if username:
+        x["_id"] = str(x["_id"])
+        app.logger.info('Info level log')
+        return x
+    app.logger.info('Info level log')
+    return "user is non"
 
 
 @app.route("/downloader")
-def down():  # function used to get data from mongoDB and store it to csv file and download it !!!
+def down():  # function used to get data from mongoDB and store it to csv file and  automatically download it !!!
     username = request.args.get('username')
     db_connect = pymongo.MongoClient("mongodb://localhost:27017")
     db = db_connect["test_db"]
@@ -124,6 +126,7 @@ def register():  # user can fill their details for registration
         user = User(username=username, firstname=first_name, lastname=last_name, email=email, password=password1)
         db.session.add(user)
         db.session.commit()
+
         flash("user registered successfully", "success")
         return redirect('/reg/')
     else:
@@ -155,8 +158,15 @@ def login():  # function used for login ,
 
 @app.route("/log_out")
 def logout():
-    logout_user()
+    # logout_user()
+
+    print(session.pop('username', None))
+
     return redirect(url_for("login"))
+
+
+# -----------------------------------------------------------------------------------------------
+# 22/07 reviewed
 
 
 @app.route("/data_dsply/", methods=["GET", "POST"])
@@ -168,7 +178,7 @@ def disdata():  # get data from database and display it to the frontend.
 
 @app.route('/cook_set', methods=['POST', 'GET'])
 def set_cookie():  # used for set cookie
-    resp = make_response("here is cookie ")
+    resp = make_response("ubyjhmjjhkj,hyjyvyvyu")
     resp.set_cookie('userID', "pravin")
     return resp
 
@@ -193,9 +203,14 @@ def about():
     db_connect = pymongo.MongoClient("mongodb://localhost:27017")
     db = db_connect["test_db"]
     collection = db["col1"]
+    abc=db.col1.find({"username":"jaydip"})
+    print(abc)
     x = collection.find_one({'username': "vijay"})
-    x["_id"] = str(x["_id"])
-    return jsonify(x)
+    if x:
+        x["_id"] = str(x["_id"])
+        return jsonify(x)
+    else:
+        return "username not  available "
 
 
 app.add_url_rule("/about", "about", about)
@@ -214,6 +229,29 @@ def store_file():
         f.save('C:/Users/pravinsinh.gohil/Desktop/file_uploding/yh.jpg')
         # app.logger.info('Info level log')
     return redirect(url_for("upload"))
+
+
+@app.route('/home/<string:name>')
+def home(name):
+    return "hello," + name
+
+
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'p.gohil1111@gmail.com'
+app.config['MAIL_PASSWORD'] = 'dlkfsjgdlkfjhfdhj'
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+
+mail = Mail(app)
+
+
+@app.route("/mails")
+def index1():
+    msg = Message('Hello', sender='p.gohil1111@gmail.com', recipients=['harsh.thakkar@msbcgroup.com'])
+    msg.body = "hello harsh how are you bro ?"
+    mail.send(msg)
+    return "Sent"
 
 
 if __name__ == "__main__":
