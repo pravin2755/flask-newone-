@@ -3,7 +3,8 @@ import pymongo
 from flask import Flask, request, render_template, flash, redirect, url_for, send_file, make_response
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
-from flask_login import LoginManager, login_user,UserMixin,logout_user
+from flask_login import LoginManager, login_user, UserMixin, logout_user
+
 app = Flask(__name__)
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:postgres@localhost:5432/test123"
@@ -14,8 +15,13 @@ migrate = Migrate(app, db)
 login_manager = LoginManager()
 login_manager.init_app(app)
 
+db_connect = pymongo.MongoClient("mongodb://localhost:27017")
+db = db_connect["test_db"]  # database get
+collection = db["col1"]
+
+
 @app.route("/", methods=["GET", "POST"])
-def create():                                              # used to create user and  store data to the mongoDB!!!
+def create():  # used to create user and  store data to the mongoDB!!!
     if request.method == "POST":
         username = request.form["username"]
         first_name = request.form["first_name"]
@@ -23,10 +29,6 @@ def create():                                              # used to create user
         email = request.form["email"]
         password1 = request.form["password1"]
         password2 = request.form["password2"]
-
-        db_connect = pymongo.MongoClient("mongodb://localhost:27017")  # connect to the database
-        db = db_connect["test_db"]  # database get
-        collection = db["col1"]  # collections(table )get
 
         all_database = db_connect.list_databases_names  # just for the got the database details.
 
@@ -47,9 +49,7 @@ def create():                                              # used to create user
 def update():
     # username = username
     username = request.args.get('username')
-    db_connect = pymongo.MongoClient("mongodb://localhost:27017")
-    db = db_connect["test_db"]                          # database get
-    collection = db["col1"]                             # collections(table )get
+    # collections(table )get
     # a = db.col1.find({'username': username})
     myquery = {'username': username}
     new_value = {"$set": {"email": " cjrfrfygvb@gmail.com"}}
@@ -58,32 +58,23 @@ def update():
 
 
 @app.route("/del")
-def delete():                                            # function used to delete user from the mongoDB !!!!
+def delete():  # function used to delete user from the mongoDB !!!!
     username = request.args.get('username')
-    db_connect = pymongo.MongoClient("mongodb://localhost:27017")
-    db = db_connect["test_db"]
-    collection = db["col1"]
     collection.delete_one({'username': username})
     return render_template("demo.html")
 
 
 @app.route("/read")
-def read():                                                 # function used to read user data from the mongoDB !!!!
+def read():  # function used to read user data from the mongoDB !!!!
     username = request.args.get('username')
-    db_connect = pymongo.MongoClient("mongodb://localhost:27017")
-    db = db_connect["test_db"]
-    collection = db["col1"]
     x = collection.find_one({"username": username})
     x["_id"] = str(x["_id"])
     return x
 
 
 @app.route("/download")
-def down():                        # function used to get data from mongoDB and store it to csv file and download it !!!
+def down():  # function used to get data from mongoDB and store it to csv file and download it !!!
     username = request.args.get('username')
-    db_connect = pymongo.MongoClient("mongodb://localhost:27017")
-    db = db_connect["test_db"]
-    collection = db["col1"]
     # x = collection.find()
     # print(type(x),x)
     x = collection.find_one({'username': username})
@@ -94,7 +85,7 @@ def down():                        # function used to get data from mongoDB and 
 
 
 @app.route("/sfile")
-def index():                           # render html file ,we used static file in html .
+def index():  # render html file ,we used static file in html .
     return render_template("new.html")
 
 
@@ -145,7 +136,7 @@ def login():
             flash("user registered successfully", "success")
             return "user  successfully logged in"
         else:
-            flash("invalid credential","warning")
+            flash("invalid credential", "warning")
             return redirect('/reg/')
 
     return render_template("login.html")
@@ -154,14 +145,14 @@ def login():
 @app.route("/logout")
 def logout():
     logout_user()
-    return redirect(url_for( "login"))
+    return redirect(url_for("login"))
 
 
 @app.route("/datadsply/", methods=["GET", "POST"])
 def disdata():
-    data=User.query.all()
+    data = User.query.all()
     print(data)
-    return render_template("dspdatfromdb.html",data1=data)
+    return render_template("dspdatfromdb.html", data1=data)
 
 
 @app.route('/cookset', methods=['POST', 'GET'])
@@ -183,18 +174,16 @@ def get_cookie():
 @app.route('/visitcount')
 def count():
     # count1 = int(request.cookies.get('visit_cookie',0))
-    getvalue=int(request.cookies.get("visit_cookie"))
+    getvalue = int(request.cookies.get("visit_cookie"))
     getvalue = getvalue + 1
     msg = "visited this page " + str(getvalue)
     resp = make_response(msg)
     resp.set_cookie("visit_cookie", str(getvalue))
     return resp
 
+
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
-
-
-
 
 # app.config["MONGO_URI"] = "mongodb://localhost:27017"
 # mongo = PyMongo(app)
