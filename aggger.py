@@ -25,19 +25,10 @@ def update():
     username = request.args.get('username')  # demo url ......"http://127.0.0.1:5005/update?username=vijay"
     db_connect = pymongo.MongoClient("mongodb://localhost:27017")
     db = db_connect["test_db"]  # database get
-    collection = db["col1"]  # collections(table )get
-    pipeline=[{"$sort":{"username":"lalit"}},{"$lookup":{
-                          "from": "blog",
-                          "localField": "username",
-                          "foreignField": "username",
-                          "as": "result"
-    }}]
-
-    data = db.col1.aggregate(pipeline)
-    print(data)
-    for i in data:
-        print (i)
-        # i["_id"]=str(i["_id"])
+    da=db.col1.find()
+    print(da)
+    for i in da:
+        print(i)
     return "sucess"
 
 

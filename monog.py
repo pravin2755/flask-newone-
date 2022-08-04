@@ -89,4 +89,11 @@ mycoll = mydb['col1']
     # mycoll.update_one(myquery, newvalues)
 
 
-# _____________________________________________
+# _____________________________________________aggregate______________________________________________________!!!!!
+
+pipeline=[{"$sort":{"username":1}},{"$limit":2}]
+datda=mydb.col1.aggregate(pipeline)
+print(datda)
+for i in datda:
+    print(i)
+
