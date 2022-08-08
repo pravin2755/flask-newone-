@@ -26,3 +26,6 @@ def create():  # used to create user and  store data to the mongoDB!!!
         collection.insert_one(dict1)
 
     return render_template("demo.html")
+
+if __name__ == "__main__":
+    app.run(debug=True, port=5444)
