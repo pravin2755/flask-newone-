@@ -6,7 +6,7 @@ db_connect = pymongo.MongoClient(
     "mongodb+srv://pravinsinh27:shivay27@cluster0.lksygvr.mongodb.net/?retryWrites=true&w=majority")  # connect to the database
 db = db_connect["test_db"]  # get database
 collection = db["col1"]  # get collections(table )
-@app.route("/", methods=["GET", "POST"])
+@app.route("/add_data", methods=["GET", "POST"])
 def create():  # used to create user and  store data to the mongoDB!!!
     if request.method == "POST":
         username = request.form["username"]
