@@ -1,13 +1,18 @@
 import pymongo
 from flask import Flask, request, render_template
+
+
 app = Flask(__name__)
-# db_connect = pymongo.MongoClient("mongodb://localhost:27017")  # connect to the database
+
 db_connect = pymongo.MongoClient(
-    "mongodb+srv://pravinsinh27:shivay27@cluster0.lksygvr.mongodb.net/?retryWrites=true&w=majority")  # connect to the database
+    "mongodb+srv://pravinsinh27:shivay27@cluster0.lksygvr.mongodb.net/?retryWrites=true&w=majority",connect=True)  # connect to the database
 db = db_connect["test_db"]  # get database
 collection = db["col1"]  # get collections(table )
-@app.route("/add_data", methods=["GET", "POST"])
-def create():  # used to create user and  store data to the mongoDB!!!
+
+
+@app.route("/", methods=["GET", "POST"])
+def create():   # used to create user and  store data to the mongoDB!!!
+    print(request.method)
     if request.method == "POST":
         username = request.form["username"]
         first_name = request.form["first_name"]
@@ -23,9 +28,11 @@ def create():  # used to create user and  store data to the mongoDB!!!
         # { item: "envelope", qty: 20 },                                #it is used for insert many data !!!!
         # { item: "stamps" , qty: 30 }
         # ] );
-        collection.insert_one(dict1)
+        print(dict1)
+        db.col1.insert_one(dict1)
 
     return render_template("demo.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=5444)
